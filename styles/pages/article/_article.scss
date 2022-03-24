@@ -1,0 +1,43 @@
+.site-main-article {
+	.article {
+		max-width: calc(1200px - 1.5rem);
+		width: 100%;
+		width: -webkit-fill-available;
+		min-height: 100vh;
+
+		&__cover {
+			height: 320px;
+			width: 100%;
+		}
+
+		&__cover img {
+			width: 100%;
+		}
+	}
+	.container {
+		&__row {
+			background: linear-gradient(180deg, #303030, #0e0e0e);
+		}
+		&__col,
+		&__col--fluid {
+			background: white;
+		}
+	}
+
+	@include respond-to("small") {
+		.site-main-article .container__col--fluid {
+			padding: 0 1.5rem;
+		}
+		.container__col--fluid > div {
+			width: 100%;
+			flex-direction: column;
+		}
+		.sidebar {
+			width: 100%;
+			margin: auto;
+			margin-bottom: 1.5rem;
+			border-radius: 1.15rem;
+			padding: 1.5rem 0rem;
+		}
+	}
+}

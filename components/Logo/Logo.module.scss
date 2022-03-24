@@ -1,0 +1,7 @@
+.logo__txt {
+  line-height: 1.45 !important;
+  margin-bottom: 0.15rem !important;
+  & * {
+      pointer-events: none;
+  }
+}

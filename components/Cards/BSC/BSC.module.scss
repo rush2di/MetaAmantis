@@ -1,0 +1,20 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.cardBSC {
+  width: 310px;
+  height: 100px;
+  padding: 1rem;
+  border: 1px solid $color-shades-800;
+  background: rgba($color-bg-dark, 50%);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.cardBSC__line {
+  transform: rotate(90deg);
+  background-color: $color-shades-800;
+  width: calc(100% + 1rem);
+}

@@ -1,0 +1,19 @@
+import {
+  _WEBSITE_TITLE,
+  _WEBSITE_DESC,
+  _WEBSITE_KEYWORDS,
+} from "./common/metadata";
+import {
+  THEME_DARK,
+  THEME_LIGHT,
+  PREFERS_DARK_COLOR_SCHEME,
+} from "./common/theme";
+
+export {
+  _WEBSITE_TITLE,
+  _WEBSITE_DESC,
+  _WEBSITE_KEYWORDS,
+  THEME_DARK,
+  THEME_LIGHT,
+  PREFERS_DARK_COLOR_SCHEME,
+};

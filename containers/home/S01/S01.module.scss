@@ -1,0 +1,208 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.S01 {
+  overflow: hidden;
+  padding: 5rem 0;
+
+  @include respond-to("large") {
+    background-image: url("../../../public/assets/images/BGWB.png");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 200px;
+      height: 100%;
+    }
+
+    &::before {
+      background: linear-gradient(90deg, black, transparent);
+      top: 0;
+      left: 0;
+      bottom: 0;
+    }
+
+    &::after {
+      background: linear-gradient(-90deg, black, transparent);
+      top: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    > div > div > div > div > div > h1 {
+      color: $color-shades-000 !important;
+    }
+    > div > div > div > div > div > p:last-child {
+      color: $color-shades-400 !important;
+    }
+    > div > div > div > div > div:last-child > div:last-child > a {
+      background-color: transparent !important;
+      border: 1px solid #fbb80b !important;
+      color: #e8a804 !important;
+    }
+  }
+
+  @include respond-to("x-small") {
+    padding: 3rem 0 1rem;
+
+    > div > div > div:nth-child(2) {
+      display: none;
+    }
+  }
+
+  @include respond-to("xx-small") {
+    > div > div > div:nth-child(2) {
+      display: initial;
+    }
+  }
+
+  h1 {
+    @include respond-to("large") {
+      font-size: $text-display-md;
+    }
+    @include respond-to("medium") {
+      font-size: 2.3rem;
+    }
+  }
+
+  > div > div > div:first-child {
+    position: relative;
+    z-index: 10;
+  }
+}
+
+.S01__illustration {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: flex-end;
+  @include respond-to("large") {
+    height: 500px;
+  }
+  @include respond-to("xx-small") {
+    height: 350px;
+  }
+
+  // &::before {
+  //   content: "";
+  //   width: 410px;
+  //   height: 760px;
+  //   position: absolute;
+  //   background-size: 90px;
+  //   background-image: url("../../../public/assets/images/DTILES.png");
+  //   right: -6.5rem;
+  //   top: -4rem;
+  //   z-index: 0;
+  // }
+
+  > div:last-child {
+    position: absolute;
+    z-index: 120;
+    bottom: 2rem;
+    right: 2.15rem;
+
+    @include respond-to("large") {
+      transform: rotate(90deg);
+      right: -7rem;
+      top: 40%;
+    }
+    @include respond-to("xx-small") {
+      transform: rotate(0deg);
+      bottom: -5rem;
+      left: 0;
+      right: 0;
+      margin: auto;
+      width: 100%;
+    }
+    @include respond-to("xx-small") {
+      > div {
+        position: relative;
+        max-width: 350px;
+        margin: auto;
+      }
+      > div > hr {
+        width: 60px;
+      }
+    }
+  }
+
+  > div:first-child {
+    position: relative;
+    background-image: url("../../../public/assets/images/BGW.jpg");
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 400px;
+    height: 650px;
+    width: 100%;
+
+    @include respond-to("large") {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      height: inherit;
+      width: inherit;
+      max-width: inherit;
+      background-image: url("../../../public/assets/images/BGWO.png");
+      background-position: left bottom;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: absolute;
+      z-index: 100;
+      bottom: 0;
+      right: 0;
+    }
+  }
+
+  > img {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include respond-to("large") {
+      top: 0;
+      bottom: 0;
+      right: -30%;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: left;
+    }
+    @include respond-to("medium") {
+      right: -30px;
+    }
+    @include respond-to("xx-small") {
+      height: 100%;
+      width: auto;
+    }
+  }
+
+  > svg {
+    position: absolute;
+    z-index: 110;
+    bottom: 4rem;
+    width: 170px;
+    right: -80px;
+
+    @include respond-to("large") {
+      bottom: 0rem;
+      width: 140px;
+    }
+    @include respond-to("medium") {
+      bottom: -2rem;
+      right: -70px;
+      width: 130px;
+    }
+    @include respond-to("xx-small") {
+      bottom: 2rem;
+      width: 100px;
+    }
+  }
+}

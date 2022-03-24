@@ -1,0 +1,20 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.sectionIntro {
+  width: 100%;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    white-space: break-spaces;
+    white-space: pre-wrap;
+  }
+
+  &__center {
+    text-align: center;
+  }
+}

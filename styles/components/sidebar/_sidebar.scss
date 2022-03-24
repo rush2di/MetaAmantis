@@ -1,0 +1,17 @@
+.sidebar {
+	min-height: 100%;
+	width: 30%;
+	min-width: 300px;
+	background-image: linear-gradient(180deg, #303030, #0e0e0e);
+	align-self: stretch;
+	justify-content: space-evenly;
+	margin-left: 2rem;
+	@media screen and (min-width: 1200px) {
+		width: 50%;
+	}
+
+	&__wrapper {
+		position: sticky;
+		top: 0;
+	}
+}

@@ -1,0 +1,57 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.footerStyles {
+  background-color: $color-bg-dark;
+  border-top: 1px solid $color-shades-800;
+  padding: 2.5rem 0 5rem;
+
+  span {
+    color: $color-secondary !important;
+  }
+  ul li:not(:first-child),
+  ul li:not(:first-child) p {
+    color: $color-shades-400;
+  }
+  ul li:not(:first-child):hover,
+  ul li:not(:first-child):hover p {
+    color: $color-shades-200;
+  }
+
+  @include respond-to("small") {
+    & > div > div {
+      flex-direction: column;
+    }
+  }
+}
+
+.footerBlock {
+  min-width: 500px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  @include respond-to("small") {
+    margin-top: 2.5rem;
+    min-width: unset;
+    width: 100%;
+  }
+
+  @include respond-to("x-small") {
+    flex-direction: column;
+    ul {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
+
+.footerDecor {
+  width: 28px;
+  height: 28px;
+  background-color: $color-secondary;
+  color: $color-shades-900;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,0 +1,76 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.menuShown {
+  @include respond-to("small") {
+    max-height: 1000px;
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.menuHidden {
+  @include respond-to("small") {
+    max-height: 105px;
+    transition: transform 0.4s ease-in-out;
+  }
+}
+
+.navbarDark {
+  background-color: $color-bg-dark;
+  transition: background-color 0.4s $easing-expo;
+}
+
+.navbarLight {
+  background-color: $color-bg-light;
+  transition: background-color 0.4s $easing-expo;
+}
+
+.mobileNav {
+  position: relative;
+  z-index: 99999;
+  margin: 0 -1.5rem;
+  padding: 0 1.5rem;
+}
+
+.itemSpacer {
+  &:not(:last-child)::after {
+    content: " ";
+    color: $color-secondary;
+    font-weight: 200;
+    margin: 0 1rem;
+    @include respond-to("medium") {
+      margin: 0 0.45rem;
+    }
+  }
+}
+
+.menuDark {
+  margin: 0 -1.5rem;
+  padding: 2rem 1.5rem;
+  background-color: $color-bg-dark;
+  border-top: 1px solid $color-shades-800;
+  border-bottom: 1px solid $color-shades-800;
+}
+.menuLight {
+  margin: 0 -1.5rem;
+  padding: 2rem 1.5rem;
+  background-color: $color-bg-light;
+  border-top: 1px solid $color-shades-200;
+  border-bottom: 1px solid $color-shades-200;
+}
+
+.menuClosed {
+  position: relative;
+  z-index: 9999;
+  transform: translateY(-100%);
+  transition: all 0.27s ease-in-out;
+  box-shadow: 0px 20px 120px 20px #00000000;
+}
+
+.menuOpen {
+  position: relative;
+  z-index: 9999;
+  transform: translateY(0%);
+  transition: all 0.27s ease-in-out;
+  box-shadow: 0px 20px 120px 20px #00000024;
+}

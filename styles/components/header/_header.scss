@@ -1,0 +1,54 @@
+div#page {
+	position: relative; // fix wordpress page layout
+}
+
+.header {
+	height: 400px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-image: url(https://images.unsplash.com/photo-1543269865-cbf427effbad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+
+	&::before {
+		content: "";
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: #000000aa;
+	}
+
+	&__content,
+	&__indicator {
+		position: relative;
+		z-index: 2;
+	}
+
+	&__content {
+		width: 90%;
+		max-width: 650px;
+	}
+
+	&__indicator {
+		position: absolute;
+		bottom: 2.5rem;
+        animation: indicator 2s infinite;
+	}
+
+    @keyframes indicator {
+        0% {
+            transform: translateY(0rem);
+        }
+
+        50% {
+            transform: translateY(1rem);
+        }
+        
+        100% {
+            transform: translateY(0rem);
+        }
+    }
+}

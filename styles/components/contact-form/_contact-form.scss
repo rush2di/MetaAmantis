@@ -1,0 +1,85 @@
+.form {
+	&__wrapper.--dark {
+		background-color: $color-tale-dark;
+		border: 1px solid #e5e5e56e;
+	}
+
+    &__wrapper.--dark input,
+	&__wrapper.--dark textarea {
+		background-color: rgba(255, 255, 255, 0.2);
+		border: 1px solid #e5e5e56e;
+    }
+
+    &__wrapper input,
+	&__wrapper textarea {    
+		width: 100% !important;
+		color: $color-tale-sky;
+		letter-spacing: 0.5px;
+    }
+
+	&__wrapper.--dark &__label {
+		color: $color-orange-mute;
+	}
+}
+
+.form {
+	&__wrapper {
+		@include effect-style-smooth-shadow;
+		@include add-borders;
+		background-color: $color-tale-extra-light;
+		border-radius: toRem(2);
+		overflow: hidden;
+		padding: 1.15rem 1.35rem;
+		height: 100%;
+		width: 100%;
+	}
+
+	&__wrapper form {
+		display: grid;
+		grid-template-rows: auto auto auto;
+		gap: 1rem;
+		width: 100%;
+		max-width: 600px;
+		@include respond-to("small") {
+			max-width: initial;
+			width: 100%;
+		}
+		@include respond-to("x-small") {
+			grid-template-rows: auto;
+			grid-template-columns: auto;
+		}
+	}
+
+    &__wrapper input,
+	&__wrapper textarea {    
+		width: 100% !important;
+		background-color: #00000005;
+		border: 1px solid #e5e5e5;
+		color: #404040;
+		letter-spacing: 0.5px;
+    }
+
+	&__label {
+		color: $color-tale-dark;
+		margin-bottom: 0.5rem;
+	}
+
+	&__fields {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1rem;
+		@include respond-to("x-small") {
+			grid-template-rows: auto;
+			grid-template-columns: auto;
+			gap: 1rem;
+		}
+	}
+
+    &__fields br {
+        display: none;
+    }
+
+	&__wrapper .wpcf7-response-output {
+		display: none;
+	}
+}
