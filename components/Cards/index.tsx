@@ -1,3 +1,4 @@
 import BSCCard from "./BSC";
+import RoadmapCard from "./Roadmap";
 
-export { BSCCard };
+export { BSCCard, RoadmapCard };

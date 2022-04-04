@@ -4,7 +4,7 @@ const { logo__txt } = styles;
 
 const Logo = () => (
   <div className="logo d-flex align-center">
-    <img src="assets/images/CSZ_logo.svg" alt="Crypto Stallionz Logo" />
+    <img src="#" alt="Crypto Stallionz Logo" />
     <h1
       className={`txt-btn --themed-logo font-comp font-weight-medium ${logo__txt}`}
     >

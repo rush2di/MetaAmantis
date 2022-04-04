@@ -11,7 +11,7 @@ const BSCCard = () => {
           By
         </p>
         <hr className={cardBSC__line} />
-        <img src="assets/images/BSC_logo.svg" alt="BSC - Binance Smart Chain" />
+        <img src="assets/images/SOL.svg" alt="Solana - Solana Blockchain" />
       </div>
     </div>
   );

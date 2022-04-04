@@ -1,0 +1,89 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.Faq {
+  position: relative;
+  background-color: $color-primary;
+  border: 1px solid $color-shades-800;
+  padding: 3rem;
+
+  ul > li:not(:last-child) > &__block::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: $color-shades-800;
+    margin: 1rem 0;
+  }
+
+  & > svg {
+    position: absolute;
+  }
+
+  & > svg:nth-child(1),
+  & > svg:nth-child(2) {
+    top: 0.5rem;
+  }
+
+  & > svg:last-child,
+  & > svg:nth-child(4) {
+    bottom: 0.5rem;
+    transform: rotateX(180deg);
+  }
+
+  & > svg:nth-child(1),
+  & > svg:nth-child(4) {
+    left: 0.5rem;
+  }
+
+  & > svg:nth-child(2),
+  & > svg:last-child {
+    right: 0.5rem;
+    transform: rotateY(180deg);
+  }
+
+  & > svg:last-child {
+    transform: rotateY(180deg) rotateX(180deg) !important;
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  &__block button {
+    width: fit-content !important;
+    padding-right: 0.5rem;
+  }
+
+  &__block button > div {
+    transition: all 0.8 ease-out;
+    display: flex;
+  }
+
+  &__hold {
+    transition: all 0.5 ease-out !important;
+    transform: rotate(0deg) translateZ(0px) !important;
+  }
+
+  &__block button:hover,
+  &__block button:active,
+  &__block button:focus-within,
+  &__block button:focus {
+    background-color: transparent;
+  }
+
+  &__block > div:nth-child(2) {
+    // transition: max-height 0.4s ease-out;
+    pointer-events: none;
+    // max-height: 0px;
+    // height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  &__block > div:nth-child(2) p {
+    margin-top: 1rem;
+  }
+}
