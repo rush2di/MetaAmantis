@@ -1,0 +1,153 @@
+@import "../../styles/abstracts/variables/variables";
+@import "../../styles/abstracts/mixins/mixins";
+
+.strips {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  font-family: $font__comp;
+  text-transform: uppercase;
+
+  &__h,
+  &__m,
+  &__b {
+    width: 100%;
+    display: flex;
+  }
+
+  &__h > div,
+  &__m > div,
+  &__b > div {
+    white-space: nowrap;
+    animation: NSL1 30s linear infinite;
+    animation-delay: -30s;
+  }
+
+  &__h > div:nth-child(2),
+  &__m > div:nth-child(2),
+  &__b > div:nth-child(2) {
+    animation: NSL2 30s linear infinite;
+    animation-delay: -15s;
+  }
+
+  &__h {
+    background-color: $color-secondary;
+    padding: 1rem 0;
+  }
+
+  &__h > div {
+    font-size: 2.6em;
+    font-weight: 500;
+  }
+
+  &__h > div span {
+    height: 0.12em;
+    width: 4em;
+    background-color: $color-shades-900;
+    display: block;
+    margin: auto 4rem;
+  }
+
+  &__m > div {
+    white-space: nowrap;
+    animation: SL1 75s linear infinite;
+    animation-delay: -75s;
+  }
+
+  &__m > div:nth-child(2) {
+    animation: SL2 75s linear infinite;
+    animation-delay: -37.5s;
+  }
+
+  &__m {
+    height: 340px;
+    background-color: lighten($color-shades-000, 1%);
+    border-top: 25px solid $color-bg-dark;
+    border-bottom: 25px solid $color-bg-dark;
+  }
+
+  &__m > div {
+    font-size: 18em;
+    font-weight: 500;
+    margin-top: -1.15rem;
+    font-style: italic;
+  }
+
+  &__m > div span {
+    height: 0.12em;
+    width: 0.2em;
+    background-color: $color-shades-900;
+    display: block;
+    margin: auto 5rem;
+    margin-left: 9rem !important;
+  }
+
+  &__b {
+    background-color: lighten($color-shades-000, 1%);
+    padding: .5rem 0;
+  }
+
+  &__b > div {
+    font-size: 2.15em;
+    font-weight: 500;
+  }
+
+  &__b > div > div {
+    width: 5em;
+    height: 1em;
+    display: block;
+    background-color: $color-shades-900;
+    background-image: url("../../public/assets/images/Zebra-Pattern.jpg");
+    background-blend-mode: lighten;
+    background-position: -72% 52%;
+    background-size: 145px;
+    margin: auto 5rem;
+  }
+
+  //   &__b > div {
+  //     white-space: nowrap;
+  //     animation: NSL1 30s linear infinite;
+  //     animation-delay: -30s;
+  //   }
+
+  //   &__b > div:nth-child(2) {
+  //     animation: NSL2 30s linear infinite;
+  //     animation-delay: -15s;
+  //   }
+}
+
+@keyframes SL1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes SL2 {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+@keyframes NSL1 {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes NSL2 {
+  0% {
+    transform: translateX(-200%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
