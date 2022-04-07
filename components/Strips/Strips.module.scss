@@ -32,11 +32,11 @@
 
   &__h {
     background-color: $color-secondary;
-    padding: 1rem 0;
+    padding: 0.75rem 0;
   }
 
   &__h > div {
-    font-size: 2.6em;
+    font-size: 1.75em;
     font-weight: 500;
   }
 
@@ -50,26 +50,26 @@
 
   &__m > div {
     white-space: nowrap;
-    animation: SL1 75s linear infinite;
-    animation-delay: -75s;
+    animation: SL1 78s linear infinite;
+    animation-delay: -78s;
   }
 
   &__m > div:nth-child(2) {
-    animation: SL2 75s linear infinite;
-    animation-delay: -37.5s;
+    animation: SL2 78s linear infinite;
+    animation-delay: -39s;
   }
 
   &__m {
-    height: 340px;
+    height: 240px;
     background-color: lighten($color-shades-000, 1%);
-    border-top: 25px solid $color-bg-dark;
-    border-bottom: 25px solid $color-bg-dark;
+    border-top: 20px solid $color-bg-dark;
+    border-bottom: 20px solid $color-bg-dark;
   }
 
   &__m > div {
-    font-size: 18em;
+    font-size: 12em;
     font-weight: 500;
-    margin-top: -1.15rem;
+    margin-top: -.75rem;
     font-style: italic;
   }
 
@@ -88,7 +88,7 @@
   }
 
   &__b > div {
-    font-size: 2.15em;
+    font-size: 1.55em;
     font-weight: 500;
   }
 

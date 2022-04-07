@@ -3,9 +3,9 @@ export type SectionIntroVariant = "lg" | "md";
 
 export interface SectionIntroPropsType {
   title: string;
-  isCenter: boolean;
+  isCenter?: boolean;
   tag: SectionIntroTag;
-  variant: SectionIntroVariant;
+  variant?: SectionIntroVariant;
   subtitle?: string;
   text?: string;
 }

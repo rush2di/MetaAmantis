@@ -10,16 +10,14 @@ import {
   BUTTON_WHITEPAPER_HREF,
   BUTTON_TOKONOMICS_HREF,
 } from "./S01.constants";
-import { useTheme } from "helpers/hooks";
-import { S01, S01__illustration } from "./S01.module.scss";
+
+import styles from "./S01.module.scss";
 import VecSVG from "public/assets/images/BGV.svg";
 
-const Section01 = () => {
-  const { theme, isDarkTheme } = useTheme();
+const { S01, S01__illustration } = styles;
 
-  const buttonThemeEffect = isDarkTheme(theme)
-    ? ButtonProps.color.comp
-    : ButtonProps.color.main;
+const Section01 = () => {
+  const buttonThemeEffect = ButtonProps.color.main;
 
   return (
     <header className={S01}>
@@ -58,7 +56,7 @@ const Section01 = () => {
           <div className="col-6 col-lg-6 col-xsm-12">
             <div className={S01__illustration}>
               <div />
-              <img src="assets/images/BGH.png" />
+              <img src="#" />
               <VecSVG />
               <BSCCard />
             </div>

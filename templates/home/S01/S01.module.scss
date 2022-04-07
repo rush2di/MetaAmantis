@@ -6,7 +6,7 @@
   padding: 5rem 0;
 
   @include respond-to("large") {
-    background-image: url("../../../public/assets/images/BGWB.png");
+    // background-image: url("../../../public/assets/images/BGWB.png");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -134,7 +134,7 @@
 
   > div:first-child {
     position: relative;
-    background-image: url("../../../public/assets/images/BGW.jpg");
+    // background-image: url("../../../public/assets/images/BGW.jpg");
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -151,7 +151,7 @@
       height: inherit;
       width: inherit;
       max-width: inherit;
-      background-image: url("../../../public/assets/images/BGWO.png");
+      // background-image: url("../../../public/assets/images/BGWO.png");
       background-position: left bottom;
       background-repeat: no-repeat;
       background-size: cover;
