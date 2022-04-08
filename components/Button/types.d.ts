@@ -2,7 +2,7 @@ import { IconProp } from "@fortawesome/fontawesome-svg-core";
 import { ReactNode } from "react";
 import { ButtonProps } from "./Button.constants";
 
-export type ButtonVariants = "bg" | "outline";
+export type ButtonVariants = "bg" | "outline" | "grads" | "out-grads";
 export type ButtonColors = "main" | "comp" | "twitter" | "discord";
 
 export interface ButtonPropsType {

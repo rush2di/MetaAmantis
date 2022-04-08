@@ -10,6 +10,8 @@ const ButtonProps = {
   variant: {
     fill: "bg",
     outline: "outline",
+    grads: "grads",
+    outline_grads: "out-grads",
   } as { [key: string]: ButtonVariants },
 };
 

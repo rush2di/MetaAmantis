@@ -149,7 +149,7 @@
   $_color: map-get($color-pairs, "color");
 
   color: $_color;
-  background-color: $_background;
+  background: $_background;
   border: 1px solid darken($_background, 5%);
 
   &:hover,
@@ -191,6 +191,113 @@
     &:active {
       background-color: map-get($color-pairs, "background");
       color: map-get($color-pairs, "color");
+    }
+  }
+}
+
+@mixin btn-grads-builder(
+  $color-pairs: (
+    "background": $color-shades-100,
+    "background-image": $color-shades-100,
+    "color": $color-shades-700,
+  ),
+  $effect_light: false,
+  $effect_strength: 8%,
+  $font_family
+) {
+  /* Getters */
+  $_background: map-get($color-pairs, "background");
+  $_background_image: map-get($color-pairs, "background-image");
+  $_color: map-get($color-pairs, "color");
+
+  position: relative;
+  background: $_background;
+  background: $_background_image;
+  border: 1px solid;
+  border-image: $_background_image 10;
+  color: $_color;
+
+  > span {
+    z-index: 1;
+    font-family: $font_family !important;
+    font-weight: 500;
+  }
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    transition: opacity 0.4s $easing-expo;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    @if $effect_light {
+      background-color: $color-shades-000;
+    } @else {
+      background-color: $color-shades-900;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @if $effect_light {
+      color: lighten($_color, 5%);
+    } @else {
+      color: darken($_color, 5%);
+    }
+  }
+
+  &:hover::before,
+  &:focus::before,
+  &:active::before {
+    opacity: 0.2;
+  }
+}
+
+@mixin btn-out-grads-builder(
+  $color-pairs: (
+    "background": $color-shades-100,
+    "background-image": $color-shades-100,
+    "color": $color-shades-700,
+  ),
+  $effect_light: false,
+  $effect_strength: 8%,
+  $font_family
+) {
+  /* Getters */
+  $_background: map-get($color-pairs, "background");
+  $_background_image: map-get($color-pairs, "background-image");
+  $_color: map-get($color-pairs, "color");
+
+  position: relative;
+  background: rgba($color-bg-dark, 50%);
+  backdrop-filter: blur(12px);
+  border: 1px solid;
+  border-image: $_background_image 10;
+  color: $_color;
+
+  > span {
+    z-index: 1;
+    font-family: $font_family !important;
+    background: $_background_image;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    @if $effect_light {
+      color: lighten($_color, 5%);
+      background: rgba($color-shades-000, 0.98);
+    } @else {
+      color: darken($_color, 5%);
+      background: rgba($color-shades-900, 0.98);
     }
   }
 }

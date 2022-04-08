@@ -7,7 +7,6 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import { ThemeContextProvider } from "helpers/hooks";
 import Layout from "components/Layout";
 import "../styles/style.scss";
-import { AnimatePresence } from "framer-motion";
 
 config.autoAddCss = false;
 library.add(fas, far, fab);

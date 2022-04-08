@@ -12,9 +12,11 @@ import {
 } from "./S01.constants";
 
 import styles from "./S01.module.scss";
-import VecSVG from "public/assets/images/BGV.svg";
+import { joinClassNames } from "helpers/utils";
 
-const { S01, S01__illustration } = styles;
+const { S01, S01__illustration, S01__blobs } = styles;
+
+console.log(styles)
 
 const Section01 = () => {
   const buttonThemeEffect = ButtonProps.color.main;
@@ -35,8 +37,8 @@ const Section01 = () => {
                 <div className="col-1 col-sm-12">
                   <Button
                     href={BUTTON_WHITEPAPER_HREF}
-                    color={ButtonProps.color.comp}
-                    variant={ButtonProps.variant.fill}
+                    color={ButtonProps.color.main}
+                    variant={ButtonProps.variant.grads}
                   >
                     Whitepaper
                   </Button>
@@ -44,24 +46,28 @@ const Section01 = () => {
                 <div className="col-1 col-sm-12">
                   <Button
                     href={BUTTON_TOKONOMICS_HREF}
-                    variant={ButtonProps.variant.outline}
+                    variant={ButtonProps.variant.outline_grads}
                     color={buttonThemeEffect}
                   >
-                    Tokonomics
+                    Roadmap
                   </Button>
                 </div>
+              </div>
+              <div className="mt-3">
+                <BSCCard />
               </div>
             </div>
           </div>
           <div className="col-6 col-lg-6 col-xsm-12">
             <div className={S01__illustration}>
               <div />
-              <img src="#" />
-              <VecSVG />
-              <BSCCard />
+              <img src="./assets/images/HERO1.png" />
             </div>
           </div>
         </div>
+      </div>
+      <div className={joinClassNames([S01__blobs])}>
+        <img src="./assets/images/CENTER.png" alt="" />
       </div>
     </header>
   );

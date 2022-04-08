@@ -46,6 +46,11 @@
     "background": $color-discord-pink,
     "color": $color-shades-000,
   );
+  $color-pairs-grads-main: (
+    "background": #ed61cb,
+    "background-image": linear-gradient(45deg, #d450b3 10%, #009de1 100%),
+    "color": $color-shades-000,
+  );
   /****************************************************************************************************************
   	*****************************************************************************************************************
   	*****************************************************************************************************************/
@@ -107,6 +112,14 @@
     @include btn-builder($color-pairs-discord);
   }
 
+  &--grads-main {
+    @include btn-grads-builder(
+      $color-pairs-grads-main,
+      $font_family: $font__main,
+      $effect_light: true
+    );
+  }
+
   /* BUTTON OUTLINE ***********************************************************************************************/
 
   &--outline-main {
@@ -135,6 +148,14 @@
 
   &--outline-warning {
     @include btn-outline-builder($color-pairs-warning);
+  }
+
+  &--out-grads-main {
+    @include btn-out-grads-builder(
+      $color-pairs-grads-main,
+      $font_family: $font__main,
+      $effect_light: true
+    );
   }
 
   /* BUTTON STRUCTURES **********************************************************************************************/

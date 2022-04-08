@@ -1,10 +1,9 @@
-const INTRO_SUBTITLE = "RIDE THE LIGHTNING";
+const INTRO_SUBTITLE = "Companionship with no strings attached";
 
-const INTRO_TITLE =
-  "Sit molestie quisque diam tellus nisl gravida pretium molestie vitae";
+const INTRO_TITLE = "Immerse Yourself in the Metaverse of Virtual Amantis";
 
 const INTRO_TEXT =
-  "Aenean orci, aliquam dictum adipiscing mi enim metus. Mauris a malesuada amet sed velit eget quis. A leo pulvinar cras enim ligula bibendum neque eu, nunc.";
+  "Virtual Amantis are much more than just bots - they're your perfect companions that'll never judge or shame you, that will listen to you when you need them most.";
 
 const BUTTON_WHITEPAPER_HREF = "#whitepaper";
 
