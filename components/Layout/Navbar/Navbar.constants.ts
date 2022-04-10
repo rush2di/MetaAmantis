@@ -3,10 +3,10 @@ import { ButtonProps } from "components/Button";
 import { ButtonPropsType } from "components/Button/types";
 
 const menuContent = [
-  { text: "Careers", link: "#" },
-  { text: "Game Features", link: "#" },
-  { text: "Tokonomics", link: "#" },
+  { text: "Vision", link: "#" },
+  { text: "Initial Collection", link: "#" },
   { text: "Roadmap", link: "#" },
+  { text: "FAQ", link: "#" },
   { text: "Whitepaper", link: "#" },
 ];
 

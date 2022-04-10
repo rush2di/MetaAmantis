@@ -70,7 +70,7 @@
     }
   }
   p {
-    color: $color-shades-400;
+    color: $color-shades-300;
   }
 }
 
@@ -136,6 +136,13 @@
     color: $color-secondary;
     transition: all 0.4s $easing-expo;
   }
+}
+
+.wrapper {
+  background-image: url("../public/assets/images/LIGHT_BLOBS.png");
+  background-position: top center;
+  background-repeat: repeat;
+  background-size: contain;
 }
 
 // .example-container {

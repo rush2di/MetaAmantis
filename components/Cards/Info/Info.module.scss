@@ -1,0 +1,53 @@
+@import "../../../styles/abstracts/variables/variables";
+@import "../../../styles/abstracts/mixins/mixins";
+
+.Info {
+  position: relative;
+  background-color: $color-primary;
+  border: 1px solid $color-shades-800;
+  max-width: 800px;
+  width: 100%;
+  padding: 2rem;
+  margin: auto;
+
+  &::before {
+    content: "";
+    position: absolute;
+    backdrop-filter: blur(12px);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
+
+  & > svg {
+    position: absolute;
+  }
+
+  & > svg:nth-child(1),
+  & > svg:nth-child(2) {
+    top: 0.5rem;
+  }
+
+  & > svg:last-child,
+  & > svg:nth-child(4) {
+    bottom: 0.5rem;
+    transform: rotateX(180deg);
+  }
+
+  & > svg:nth-child(1),
+  & > svg:nth-child(4) {
+    left: 0.5rem;
+  }
+
+  & > svg:nth-child(2),
+  & > svg:last-child {
+    right: 0.5rem;
+    transform: rotateY(180deg);
+  }
+
+  & > svg:last-child {
+    transform: rotateY(180deg) rotateX(180deg) !important;
+  }
+}

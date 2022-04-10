@@ -5,7 +5,12 @@
   position: relative;
   background-color: $color-primary;
   border: 1px solid $color-shades-800;
+  max-width: 800px;
+  margin: auto;
   padding: 3rem;
+  @include respond-to("x-small") {
+    padding: 3.5rem 1.5rem; 
+  }
 
   ul > li:not(:last-child) > &__block::after {
     content: "";
@@ -60,6 +65,12 @@
   &__block button > div {
     transition: all 0.8 ease-out;
     display: flex;
+  }
+
+  &__block > div > h5 {
+    @include respond-to("x-small") {
+      font-size: 1.12rem;
+    }
   }
 
   &__hold {

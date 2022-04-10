@@ -7,10 +7,21 @@
   padding: 1rem;
   border: 1px solid $color-shades-800;
   background: rgba($color-bg-dark, 50%);
-  backdrop-filter: blur(12px);
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    backdrop-filter: blur(12px);
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+  }
 }
 
 .cardBSC__line {

@@ -8,7 +8,7 @@
   background-repeat: no-repeat;
   background-size: cover;
 
-  & > div > div > div > div > div > p:first-child {
+  & > div > div > div > div > div > div > p:first-child {
     background: linear-gradient(45deg, #ed61cb 10%, #00abf7 100%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -16,6 +16,34 @@
     font-weight: 800;
     text-transform: none;
     font-size: 1rem;
+  }
+
+  & > div:nth-child(2) > div > div > div > div:last-child > div {
+    margin-left: -0.25rem;
+    @include respond-to("x-small") {
+      width: 100%;
+      margin-left: initial;
+    }
+    @media screen and (max-width: 660px) and (min-width: 426px) {
+      display: none;
+    }
+  }
+  & > div:nth-child(2) > div > div > div > div:last-child > div > div {
+    @include respond-to("x-small") {
+      max-width: 270px;
+      margin: auto !important;
+    }
+  }
+
+  &__mobile {
+    display: none;
+    @include respond-to("x-small") {
+      display: block;
+      position: relative;
+      margin-top: -3rem;
+      margin-bottom: 1rem;
+      z-index: 1;
+    }
   }
 
   @include respond-to("large") {
@@ -89,13 +117,25 @@
     z-index: 10;
   }
 
+  > div:nth-child(2) > div {
+    @include respond-to("small") {
+      flex-wrap: nowrap;
+    }
+  }
+
   &__blobs {
-    height: 300px;
+    height: 160px;
     position: relative;
     overflow: visible;
     max-width: 1470px;
     width: 100%;
     margin: auto;
+    @include respond-to("large") {
+      height: 80px;
+    }
+    @include respond-to("small") {
+      height: 2.75rem;
+    }
   }
 
   &__blobs > img {
@@ -118,6 +158,14 @@
       object-position: 50% 50%;
       width: 100%;
       height: 420px;
+    }
+    @include respond-to("x-small") {
+      display: none;
+    }
+  }
+  &__hide_mobile {
+    @include respond-to("x-small") {
+      display: none;
     }
   }
 }

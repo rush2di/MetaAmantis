@@ -1,7 +1,10 @@
 @import "../../../styles/abstracts/variables/variables";
 @import "../../../styles/abstracts/mixins/mixins";
 
-.footerStyles {
-  background-color: $color-bg-dark;
-  border-top: 1px solid $color-shades-800;
+.S04 {
+  // styles
+  & > div > div > div {
+    white-space: nowrap;
+    flex-wrap: wrap;
+  }
 }

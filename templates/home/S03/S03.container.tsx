@@ -14,10 +14,14 @@ const Section03 = () => {
       <Strips />
       <div className={S03__cover}>
         <div className="container">
-          <Image src={Cover} layout="responsive" placeholder="blur" />
+          <div>
+            <Image src={Cover} layout="responsive" />
+          </div>
           <div className={S03__content}>
-            <h3 className="txt-h2 font-comp">{TITLE}</h3>
-            <h4 className="txt-h3 font-comp">{SUBTITLE}</h4>
+            <div className="container">
+              <h3 className="txt-h2 font-comp txt-center">{TITLE}</h3>
+              <h4 className="txt-h3 font-comp txt-center">{SUBTITLE}</h4>
+            </div>
           </div>
         </div>
       </div>

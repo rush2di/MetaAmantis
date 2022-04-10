@@ -5,6 +5,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  max-width: 800px;
+  margin: auto;
 
   &__body {
     position: relative;
@@ -22,7 +24,7 @@
     @include respond-to("x-small") {
       flex-direction: column;
       align-items: flex-start;
-      padding: 2rem 3rem 3rem;
+      padding: 3rem 2rem 3rem;
     }
   }
   &__body > div:first-child {

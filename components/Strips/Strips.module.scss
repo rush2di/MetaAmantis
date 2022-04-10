@@ -33,11 +33,17 @@
   &__h {
     background-color: $color-secondary;
     padding: 0.75rem 0;
+    @include respond-to("small") {
+      padding: 0.25rem 0;
+    }
   }
 
   &__h > div {
     font-size: 1.75em;
     font-weight: 500;
+    @include respond-to("small") {
+      font-size: 1.15em;
+    }
   }
 
   &__h > div span {
@@ -64,13 +70,27 @@
     background-color: lighten($color-shades-000, 1%);
     border-top: 20px solid $color-bg-dark;
     border-bottom: 20px solid $color-bg-dark;
+    @include respond-to("small") {
+      height: 180px;
+      border-top: 15px solid $color-bg-dark;
+      border-bottom: 15px solid $color-bg-dark;
+    }
+    @include respond-to("x-small") {
+      height: 140px;
+    }
   }
 
   &__m > div {
     font-size: 12em;
     font-weight: 500;
-    margin-top: -.75rem;
+    margin-top: -0.75rem;
     font-style: italic;
+    @include respond-to("small") {
+      font-size: 8em;
+    }
+    @include respond-to("x-small") {
+      font-size: 6em;
+    }
   }
 
   &__m > div span {
@@ -84,12 +104,18 @@
 
   &__b {
     background-color: lighten($color-shades-000, 1%);
-    padding: .5rem 0;
+    padding: 0.5rem 0;
+    @include respond-to("small") {
+      padding: 0.2rem 0;
+    }
   }
 
   &__b > div {
     font-size: 1.55em;
     font-weight: 500;
+    @include respond-to("small") {
+      font-size: 1.2em;
+    }
   }
 
   &__b > div > div {

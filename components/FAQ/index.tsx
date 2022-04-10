@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { v4 as uuid } from "uuid";
-import { motion, AnimatePresence, LayoutGroup } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
-import { joinClassNames } from "helpers/utils";
 import { FAQBlockProps, FAQProps } from "./types";
 
 import {
@@ -61,7 +60,7 @@ const FAQBlock = ({
     <>
       <motion.li layout className="w-100">
         <motion.div className={Faq__block}>
-          <motion.div className="d-flex align-center justify-between w-100">
+          <motion.div className="d-flex align-start justify-between w-100">
             <motion.h5 className="txt-h5 font-weight-normal font-comp color-light">
               {appendQuestionIndex(index, question)}
             </motion.h5>
