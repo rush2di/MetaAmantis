@@ -1,8 +1,15 @@
+import { motion } from "framer-motion";
+
 import { joinClassNames } from "helpers/utils";
-import { SectionIntroProps } from "./SectionIntro.constants";
+
+import {
+  SectionIntroProps,
+  textAnimation,
+  wrapperAnimation,
+} from "./SectionIntro.constants";
 import { setClassName } from "./SectionIntro.utils";
-import styles from "./SectionIntro.module.scss";
 import { SectionIntroPropsType } from "./types";
+import styles from "./SectionIntro.module.scss";
 
 const { sectionIntro, sectionIntro__center } = styles;
 
@@ -10,24 +17,39 @@ const SectionIntro = ({
   tag = SectionIntroProps.tag.h1,
   variant = SectionIntroProps.variant.lg,
   isCenter = SectionIntroProps.isCenter.false,
+  animated = SectionIntroProps.animated.false,
   subtitle,
   title,
   text,
 }: SectionIntroPropsType) => {
   const CostumTag = tag;
 
-  const styles = isCenter
+  const componentStyles = isCenter
     ? joinClassNames([sectionIntro, sectionIntro__center])
     : sectionIntro;
 
   return (
-    <div className={styles}>
+    <motion.div
+      {...(animated ? { ...wrapperAnimation } : {})}
+      className={componentStyles}
+    >
       {!!subtitle && (
-        <p className="txt-md txt-uppercase color-comp mb-0-50">{subtitle}</p>
+        <motion.p
+          {...(animated ? { ...textAnimation } : {})}
+          className="txt-md txt-uppercase color-comp mb-0-50"
+        >
+          {subtitle}
+        </motion.p>
       )}
-      <CostumTag className={setClassName(variant)}>{title}</CostumTag>
-      {!!text && <p className="txt">{text}</p>}
-    </div>
+      <motion.div {...(animated ? { ...textAnimation } : {})}>
+        <CostumTag className={setClassName(variant)}>{title}</CostumTag>
+      </motion.div>
+      {!!text && (
+        <motion.p {...(animated ? { ...textAnimation } : {})} className="txt">
+          {text}
+        </motion.p>
+      )}
+    </motion.div>
   );
 };
 

@@ -8,4 +8,5 @@ export interface SectionIntroPropsType {
   variant?: SectionIntroVariant;
   subtitle?: string;
   text?: string;
+  animated?: boolean
 }

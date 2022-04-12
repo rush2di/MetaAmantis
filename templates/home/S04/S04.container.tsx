@@ -1,5 +1,9 @@
+import { motion } from "framer-motion";
+
 import { InfoCard } from "components/Cards";
 import { joinClassNames } from "helpers/utils";
+import { defaultAnimationProps } from "helpers/constants/common/animations";
+
 import {
   PARAGRAPH_ONE,
   PARAGRAPH_TWO,
@@ -15,22 +19,31 @@ const { S04 } = styles;
 
 const Section04 = () => {
   return (
-    <section className={joinClassNames([S04, "container pt-5 mb-1 pt-xsm-4 pb-xsm-0 mb-xsm-1"])}>
-      <InfoCard>
-        <h2 className="txt-h4 font-comp color-light mb-1">{TITLE}</h2>
-        <p className="txt mb-0-50">{PARAGRAPH_ONE}</p>
-        <p className="txt">{PARAGRAPH_TWO}</p>
-        <div className="d-flex mt-1">
-          <div className="d-flex txt-h6 font-comp txt-uppercase mt-1">
-            <p className="color-light font-weight-medium">{PRESALE_SUPPLY_TXT}</p>
-            <p className="color-muted ml-0-50 mr-1-50">{PRESALE_SUPPLY_VALUE}</p>
+    <section
+      className={joinClassNames([ S04,"container pt-5 mb-1 pt-xsm-4 pb-xsm-0 mb-xsm-1"])}>
+      <motion.div {...defaultAnimationProps}>
+        <InfoCard>
+          <h2 className="txt-h4 font-comp color-light mb-1">{TITLE}</h2>
+          <p className="txt mb-0-50">{PARAGRAPH_ONE}</p>
+          <p className="txt">{PARAGRAPH_TWO}</p>
+          <div className="d-flex mt-1">
+            <div className="d-flex txt-h6 font-comp txt-uppercase mt-1">
+              <p className="color-light font-weight-medium">
+                {PRESALE_SUPPLY_TXT}
+              </p>
+              <p className="color-muted ml-0-50 mr-1-50">
+                {PRESALE_SUPPLY_VALUE}
+              </p>
+            </div>
+            <div className="d-flex txt-h6 font-comp txt-uppercase mt-1">
+              <p className="color-light font-weight-medium">
+                {PUBSALE_SUPPLY_TXT}
+              </p>
+              <p className="color-muted ml-0-50">{PUBSALE_SUPPLY_VALUE}</p>
+            </div>
           </div>
-          <div className="d-flex txt-h6 font-comp txt-uppercase mt-1">
-            <p className="color-light font-weight-medium">{PUBSALE_SUPPLY_TXT}</p>
-            <p className="color-muted ml-0-50">{PUBSALE_SUPPLY_VALUE}</p>
-          </div>
-        </div>
-      </InfoCard>
+        </InfoCard>
+      </motion.div>
     </section>
   );
 };

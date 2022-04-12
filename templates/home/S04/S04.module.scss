@@ -2,8 +2,7 @@
 @import "../../../styles/abstracts/mixins/mixins";
 
 .S04 {
-  // styles
-  & > div > div > div {
+  & div > div > div > div {
     white-space: nowrap;
     flex-wrap: wrap;
   }

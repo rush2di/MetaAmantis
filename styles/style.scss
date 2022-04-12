@@ -139,10 +139,11 @@
 }
 
 .wrapper {
-  background-image: url("../public/assets/images/LIGHT_BLOBS.png");
+  background-image: url("../public/assets/images/BG1.png");
+  background-repeat: no-repeat;
   background-position: top center;
-  background-repeat: repeat;
-  background-size: contain;
+  background-size: cover;
+
 }
 
 // .example-container {

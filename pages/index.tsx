@@ -17,9 +17,11 @@ const Home: NextPage = () => {
       <Section01 />
       <Section02 />
       <Section03 />
-      <Section04 />
-      <Section05 />
-      <Section06 />
+      <div className="wrapper">
+        <Section04 />
+        <Section05 />
+        <Section06 />
+      </div>
     </>
   );
 };

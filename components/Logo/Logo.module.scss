@@ -1,7 +1,11 @@
-.logo__txt {
-  line-height: 1.45 !important;
-  margin-bottom: 0.15rem !important;
+.logo {
+  & h1 {
+    line-height: 1.25 !important;
+    margin-bottom: 0.15rem !important;
+    margin-left: 0.5rem;
+    font-size: 1.14rem;
+  }
   & * {
-      pointer-events: none;
+    pointer-events: none;
   }
 }

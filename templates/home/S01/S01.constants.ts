@@ -9,10 +9,43 @@ const BUTTON_WHITEPAPER_HREF = "#whitepaper";
 
 const BUTTON_TOKONOMICS_HREF = "#tokonomics";
 
+const buttonsWrapperAnimation = {
+  initial: "hidden",
+  whileInView: "visible",
+  viewport: { once: true },
+  variants: {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        delay: 0.85,
+        staggerChildren: 0.3,
+        delayChildren: 0.95,
+      },
+    },
+  },
+};
+
+const buttonAnimation = {
+  variants: {
+    hidden: { opacity: 0, y: 10 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        stiffness: 40,
+      },
+    },
+  },
+};
+
 export {
   INTRO_SUBTITLE,
   INTRO_TITLE,
   INTRO_TEXT,
   BUTTON_WHITEPAPER_HREF,
   BUTTON_TOKONOMICS_HREF,
+  buttonsWrapperAnimation,
+  buttonAnimation,
 };
