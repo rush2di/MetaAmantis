@@ -1,13 +1,12 @@
-import { IconName } from "@fortawesome/fontawesome-svg-core";
 import { ButtonProps } from "components/Button";
 import { ButtonPropsType } from "components/Button/types";
 
 const menuContent = [
-  { text: "Vision", link: "#" },
-  { text: "Initial Collection", link: "#" },
-  { text: "Roadmap", link: "#" },
-  { text: "FAQ", link: "#" },
-  { text: "Whitepaper", link: "#" },
+  { text: "Vision", link: "#vision" },
+  { text: "Initial Collection", link: "#initial-collection" },
+  { text: "Roadmap", link: "#roadmap" },
+  { text: "FAQ", link: "#faq" },
+  { text: "Whitepaper", link: "#whitepaper" },
 ];
 
 const mobileMenuButtons = [

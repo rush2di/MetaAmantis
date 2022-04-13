@@ -75,6 +75,7 @@
   &__bl,
   &__br {
     position: absolute;
+    z-index: 1;
   }
 
   &__tl,

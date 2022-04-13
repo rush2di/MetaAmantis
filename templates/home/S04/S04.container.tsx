@@ -20,7 +20,12 @@ const { S04 } = styles;
 const Section04 = () => {
   return (
     <section
-      className={joinClassNames([ S04,"container pt-5 mb-1 pt-xsm-4 pb-xsm-0 mb-xsm-1"])}>
+      className={joinClassNames([
+        S04,
+        "container pt-5 mb-1 pt-xsm-4 pb-xsm-0 mb-xsm-1",
+      ])}
+      id="initial-collection"
+    >
       <motion.div {...defaultAnimationProps}>
         <InfoCard>
           <h2 className="txt-h4 font-comp color-light mb-1">{TITLE}</h2>

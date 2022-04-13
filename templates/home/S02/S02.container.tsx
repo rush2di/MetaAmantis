@@ -11,7 +11,7 @@ const { S02, S02__grads } = styles;
 const Section02 = () => {
   return (
     <>
-      <div className={S02__grads}>
+      <div className={S02__grads} id="vision">
         <div>
           <section className="container">
             <motion.div {...defaultAnimationProps} className={S02}>

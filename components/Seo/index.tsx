@@ -26,17 +26,6 @@ const Seo = ({ pageTitle, pageDesc }: SeoProps) => {
         />
         <meta name="twitter:image" content="/assets/thumbnail.jpg" />
         <meta name="keywords" content={_WEBSITE_KEYWORDS}></meta>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin=""
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&family=Tomorrow:wght@300;400;500;600;700;800&display=swap"
-          rel="stylesheet"
-        ></link>
-
         <title>
           {_WEBSITE_TITLE} | {pageTitle}
         </title>

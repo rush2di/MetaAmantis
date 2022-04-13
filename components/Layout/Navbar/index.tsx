@@ -8,6 +8,7 @@ import Logo from "components/Logo";
 import styles from "./Navbar.module.scss";
 import { menuContent, mobileMenuButtons } from "./Navbar.constants";
 import { useTheme } from "helpers/hooks";
+import Link from "next/link";
 
 const {
   itemSpacer,
@@ -48,7 +49,9 @@ const Navbar = () => {
                 key={uuidv4()}
                 className={`nav__item-txt font-comp ${itemSpacer}`}
               >
-                <a href={link}>{text}</a>
+                <Link href={link} scroll={false}>
+                  <a onClick={() => setIsOpen(false)}>{text}</a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -69,7 +72,9 @@ const Navbar = () => {
           <ul className="d-flex align-items flex-column txt-h6 pb-1 --themed-nav">
             {menuContent.map(({ text, link }) => (
               <li key={uuidv4()} className="nav__item-txt font-comp mb-1-75">
-                <a href={link}>{text}</a>
+                <Link href={link} scroll={false}>
+                  <a onClick={() => setIsOpen(false)}>{text}</a>
+                </Link>
               </li>
             ))}
           </ul>

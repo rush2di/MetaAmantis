@@ -8,7 +8,10 @@ import { TITLE, FAQ_LIST } from "./S06.constants";
 
 const Section06 = () => {
   return (
-    <section className="container py-4 pt-xsm-2 pb-xsm-2 mb-xsm-1 mb-2">
+    <section
+      id="faq"
+      className="container py-4 pt-xsm-2 pb-xsm-2 mb-xsm-1 mb-2"
+    >
       <SectionIntro
         title={TITLE}
         tag={SectionIntroProps.tag.h6}
