@@ -15,20 +15,21 @@ import styles from "./FAQ.module.scss";
 import FAQToggle from "public/assets/images/FAQTOGGLE.svg";
 import Corner from "public/assets/images/Corner.svg";
 
-const { Faq, Faq__block } = styles;
+const { Faq, Faq__block, Corner__tl, Corner__tr, Corner__br, Corner__bl } =
+  styles;
 
 const FAQ = ({ list }: FAQProps) => {
   return (
     <motion.div className={Faq}>
-      <Corner />
-      <Corner />
+      <Corner className={Corner__tl} />
+      <Corner className={Corner__tr} />
       <motion.ul layout className="d-flex align-start flex-column">
         {list.map((content, index) => {
           return <FAQBlock key={uuid()} index={index} {...content} />;
         })}
       </motion.ul>
-      <Corner />
-      <Corner />
+      <Corner className={Corner__bl} />
+      <Corner className={Corner__br} />
     </motion.div>
   );
 };

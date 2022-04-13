@@ -20,34 +20,39 @@
     left: 0;
     top: 0;
   }
+}
 
-  & > svg {
+.Corner {
+  &__tl,
+  &__tr,
+  &__bl,
+  &__br {
     position: absolute;
   }
 
-  & > svg:nth-child(1),
-  & > svg:nth-child(2) {
+  &__tl,
+  &__tr {
     top: 0.5rem;
   }
 
-  & > svg:last-child,
-  & > svg:nth-child(4) {
+  &__bl,
+  &__br {
     bottom: 0.5rem;
     transform: rotateX(180deg);
   }
 
-  & > svg:nth-child(1),
-  & > svg:nth-child(4) {
+  &__tl,
+  &__bl {
     left: 0.5rem;
   }
 
-  & > svg:nth-child(2),
-  & > svg:last-child {
+  &__tr,
+  &__br {
     right: 0.5rem;
     transform: rotateY(180deg);
   }
 
-  & > svg:last-child {
+  &__br {
     transform: rotateY(180deg) rotateX(180deg) !important;
   }
 }

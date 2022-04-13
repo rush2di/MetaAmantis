@@ -11,8 +11,7 @@ const BUTTON_TOKONOMICS_HREF = "#tokonomics";
 
 const buttonsWrapperAnimation = {
   initial: "hidden",
-  whileInView: "visible",
-  viewport: { once: true },
+  animate: "visible",
   variants: {
     hidden: { opacity: 0 },
     visible: {

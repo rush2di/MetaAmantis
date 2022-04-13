@@ -9,7 +9,7 @@
   margin: auto;
   padding: 3rem;
   @include respond-to("x-small") {
-    padding: 3.5rem 1.5rem; 
+    padding: 3.5rem 1.5rem;
   }
 
   ul > li:not(:last-child) > &__block::after {
@@ -19,36 +19,6 @@
     height: 1px;
     background-color: $color-shades-800;
     margin: 1rem 0;
-  }
-
-  & > svg {
-    position: absolute;
-  }
-
-  & > svg:nth-child(1),
-  & > svg:nth-child(2) {
-    top: 0.5rem;
-  }
-
-  & > svg:last-child,
-  & > svg:nth-child(4) {
-    bottom: 0.5rem;
-    transform: rotateX(180deg);
-  }
-
-  & > svg:nth-child(1),
-  & > svg:nth-child(4) {
-    left: 0.5rem;
-  }
-
-  & > svg:nth-child(2),
-  & > svg:last-child {
-    right: 0.5rem;
-    transform: rotateY(180deg);
-  }
-
-  & > svg:last-child {
-    transform: rotateY(180deg) rotateX(180deg) !important;
   }
 
   &__block {
@@ -96,5 +66,40 @@
 
   &__block > div:nth-child(2) p {
     margin-top: 1rem;
+  }
+}
+
+.Corner {
+  &__tl,
+  &__tr,
+  &__bl,
+  &__br {
+    position: absolute;
+  }
+
+  &__tl,
+  &__tr {
+    top: 0.5rem;
+  }
+
+  &__bl,
+  &__br {
+    bottom: 0.5rem;
+    transform: rotateX(180deg);
+  }
+
+  &__tl,
+  &__bl {
+    left: 0.5rem;
+  }
+
+  &__tr,
+  &__br {
+    right: 0.5rem;
+    transform: rotateY(180deg);
+  }
+
+  &__br {
+    transform: rotateY(180deg) rotateX(180deg) !important;
   }
 }
